@@ -6,6 +6,7 @@ import { GrClose } from "react-icons/gr";
 import Link from "next/link";
 import { Navbar } from "../Navbar";
 import { useState } from "react";
+import Image from "next/image";
 
 export function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -14,7 +15,7 @@ export function Header() {
     <div className="container mx-auto my-5">
       <div className="flex items-center justify-between px-5 md:px-9">
         <Link href="/">
-          <h1 className="font-medium">PruebaRealState</h1>
+          <Image src="/logo.svg" alt="Real State" width={100} height={40} />
         </Link>
         {!openMobileMenu ? (
           <CiMenuFries
