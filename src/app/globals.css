@@ -7,6 +7,11 @@ body {
   scroll-behavior: smooth;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .swiper-scrollbar-drag {
   background: #727c73;
 }
@@ -21,6 +26,7 @@ body {
 }
 
 /* @layer base {
+
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
