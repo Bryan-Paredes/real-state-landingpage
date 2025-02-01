@@ -22,9 +22,7 @@ export default function Example() {
   return (
     <Transition>
       <div className="container  px-20 md:px-36">
-        <h4 className="mt-2 text-secondary">
-          Architected for speed and reliability
-        </h4>
+        <h2 className="mt-2 text-secondary text-xl">Metricas</h2>
         <p className="mt-6 max-w-3xl text-lg font-semibold">
           Descubre nuestras métricas clave en <strong>Bienes Raices</strong>: el
           número de <strong>Visitantes</strong>, la cantidad de{" "}
