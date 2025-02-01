@@ -34,7 +34,7 @@ export function Navbar(props: NavbarProps) {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="ml-auto mr-auto md:fixed z-[9999] right-0 left-0 px-6 py-3 text-white bg-gray-400/40 top-10 rounded-3xl backdrop-blur w-fit"
+          className="ml-auto mr-auto md:fixed z-[9999] right-0 left-0 px-6 py-3 text-secondary bg-gray-400/40 top-10 rounded-3xl backdrop-blur w-fit"
         >
           <div className="items-center hidden gap-5 md:flex">
             {dataHeader.map(({ id, name, link }) => (
@@ -47,10 +47,10 @@ export function Navbar(props: NavbarProps) {
               </Link>
             ))}
             <Link
-              className="px-3 py-2 text-white rounded-lg bg-secondary hover:bg-black transition-all 3s"
-              href="/login"
+              className="px-4 py-2 font-bold text-secondary border-2 border-secondary rounded-lg hover:text-white hover:bg-secondary transition-colors 3s"
+              href="/contacto"
             >
-              Login
+              Contacto
             </Link>
           </div>
         </motion.nav>

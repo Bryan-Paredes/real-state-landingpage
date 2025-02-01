@@ -23,6 +23,9 @@ export function Properties() {
 
   return (
     <Transition className="px-4 py-8 md:py-32 md:px-40">
+      <h2 id="propierties" className="text-secondary text-center text-xl my-10">
+        Propiedades
+      </h2>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {dataFilteredHouses.map(
           ({

@@ -17,7 +17,7 @@ export function Slider() {
       pagination={{ clickable: false }}
       scrollbar={{ draggable: true }}
       modules={[Scrollbar, EffectCards]}
-      className="h-[240px] md:h-[320px] w-[300px] md:w-[500px]"
+      className="h-[240px] md:h-[380px] w-[300px] md:w-[500px]"
       grabCursor
     >
       {sliderDataImages.map(({ id, urlImage }) => (
