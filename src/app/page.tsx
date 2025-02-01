@@ -1,4 +1,5 @@
 "use client";
+
 import { About } from "@/components/About";
 import { Banner } from "@/components/Banner";
 import CountSection from "@/components/CountSection";
@@ -6,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JoinCommunity } from "@/components/JoinCommunity";
 import { Properties } from "@/components/Properties";
-import { Services } from "@/components/Services";
+import { Services } from "@/components/Services/Services";
 import { TransitionPage } from "@/components/TransitionPage";
 import dynamic from "next/dynamic";
 
