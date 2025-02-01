@@ -4,9 +4,9 @@ import { Transition } from "../Transition";
 
 export function About() {
   return (
-    <Transition className="grid gap-4 px-4 py-8 md:py-46 md:px-36 md:grid-cols-2 md:gap-28">
+    <Transition className="flex flex-col lg:flex-row items-center justify-center gap-5 px-10 py-16 md:px-36 md:py-32">
       <div
-        className="flex flex-col items-center justify-center max-w-xl mb-7"
+        className="flex flex-col items-center justify-center mb-7"
         id="about"
       >
         <h4 className="text-secondary text-xl">Sobre Nosotros</h4>

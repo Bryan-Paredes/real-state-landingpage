@@ -3,8 +3,8 @@ import "@/app/globals.css";
 
 export function Banner() {
   return (
-    <div className="banner container mx-auto relative">
-      <div className="banner pt-20 md:pt-0 min-h-[80vh] bg-banner-image bg-no-repeat bg-cover bg-center rounded-3xl relative flex flex-col items-center justify-center">
+    <div className="w-full h-full my-6">
+      <div className="pt-20 md:pt-0 min-h-[80vh] bg-banner-image bg-no-repeat bg-cover bg-center rounded-3xl relative flex flex-col items-center justify-center">
         <div className="max-w-3xl text-center text-white">
           <h2 className="text-5xl font-bold">
             Descubre la vivienda ideal para vivir en la ciudad

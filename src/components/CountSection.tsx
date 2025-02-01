@@ -21,9 +21,9 @@ const stats = [
 export default function Example() {
   return (
     <Transition>
-      <div className="container  px-20 md:px-36">
+      <div className="px-20 md:px-36">
         <h2 className="mt-2 text-secondary text-xl">Metricas</h2>
-        <p className="mt-6 max-w-3xl text-lg font-semibold">
+        <p className="mt-6 text-lg font-semibold text-justify">
           Descubre nuestras métricas clave en <strong>Bienes Raices</strong>: el
           número de <strong>Visitantes</strong>, la cantidad de{" "}
           <strong>propiedades disponibles</strong> y los{" "}

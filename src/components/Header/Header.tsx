@@ -40,13 +40,13 @@ export function Header() {
               +(502) 5555-5555
             </span>
           </Link>
+          <Link
+            href="/contacto"
+            className="px-4 py-2 font-bold text-secondary border-2 border-secondary rounded-lg hover:text-white hover:bg-secondary transition-colors 3s"
+          >
+            Contacto
+          </Link>
         </div>
-        <Link
-          href="/contacto"
-          className="px-4 py-2 font-bold text-secondary border-2 border-secondary rounded-lg hover:text-white hover:bg-secondary transition-colors 3s"
-        >
-          Contacto
-        </Link>
       </div>
     </div>
   );

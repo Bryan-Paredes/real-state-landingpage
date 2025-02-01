@@ -1,20 +1,39 @@
+"use client";
+
 import React from "react";
 import { Button } from "@/components/UI/button";
 import { Separator } from "@/components/UI/separator";
 import { Input } from "@/components/UI/input";
 import { Label } from "@/components/UI/label";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Contact() {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Form submitted");
+  };
+
   return (
     <>
-      <div className="sm:mx-auto sm:max-w-2xl">
+      <div className="sm:mx-auto sm:max-w-2xl flex flex-col gap-3 justify-center bg-white rounded-lg p-10  my-20 shadow-2xl shadow-secondary/50">
+        <Link href="/">
+          <div className="max-w-24 flex items-center justify-start gap-2 hover:text-secondary hover:-translate-x-2 transition-transform duration-300">
+            <FaArrowLeftLong />
+            <h2>Regresar</h2>
+          </div>
+        </Link>
         <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
           Register to workspace
         </h3>
         <p className="mt-1 text-sm/6 text-gray-500 dark:text-gray-500">
           Take a few moments to register for your companys workspace
         </p>
-        <form action="#" method="post" className="mt-8">
+        <form
+          onSubmit={handleSubmit}
+          method="post"
+          className="mt-8 accent-secondary"
+        >
           <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-6">
             <div className="col-span-full sm:col-span-3">
               <Label htmlFor="first-name" className="font-medium">
@@ -114,9 +133,14 @@ export default function Contact() {
             </div>
           </div>
           <Separator />
-          <div className="flex items-center justify-end space-x-4">
-            <Button variant="secondary">Cancel</Button>
-            <Button type="submit">Submit</Button>
+          <div className="flex items-center justify-start space-x-4 mt-6">
+            <Button
+              variant="secondary"
+              type="submit"
+              className="text-white px-6 py-4"
+            >
+              Submit
+            </Button>
           </div>
         </form>
       </div>

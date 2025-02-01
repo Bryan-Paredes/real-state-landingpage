@@ -7,12 +7,12 @@ import SpotlightCard from "@/components/UI/SpotlightCard/SpotlightCard";
 
 export function Services() {
   return (
-    <Transition className="flex items-center justify-center">
+    <Transition className=" flex flex-wrap items-center justify-center">
       <div id="services" className="w-full h-full">
         <h2 className="text-secondary text-center text-xl">Servicios</h2>
 
         <div className="flex mx-auto w-full h-full px-3 py-16">
-          <dl className="flex flex-col md:flex-row items-center justify-center gap-5">
+          <dl className="flex flex-col lg:flex-row items-center justify-center gap-5">
             {services.map((item) => (
               <SpotlightCard
                 spotlightColor="rgba(197, 202, 197, 1)"

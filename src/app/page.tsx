@@ -3,8 +3,6 @@
 import { About } from "@/components/About";
 import { Banner } from "@/components/Banner";
 import CountSection from "@/components/CountSection";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { JoinCommunity } from "@/components/JoinCommunity";
 import { Properties } from "@/components/Properties";
 import { Services } from "@/components/Services/Services";
@@ -22,18 +20,16 @@ export default function Home() {
   return (
     <>
       <TransitionPage />
-      <Header />
-      <main>
+      <main className="container mx-auto">
         <Banner />
         <Properties />
-        <div className="max-w-6xl mx-auto">
+        <section>
           <Services />
           <CountSection />
           <LocationMap />
           <About />
-        </div>
+        </section>
         <JoinCommunity />
-        <Footer />
       </main>
     </>
   );
