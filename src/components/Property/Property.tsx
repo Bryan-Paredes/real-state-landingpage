@@ -16,6 +16,22 @@ import { Navigation, Pagination, Controller } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { CSSProperties } from "react";
+
+interface CustomCSSProperties extends CSSProperties {
+  "--swiper-navigation-size"?: string;
+  "--swiper-navigation-color"?: string;
+  "--swiper-pagination-color"?: string;
+  "--swiper-navigation-color-background"?: string;
+}
+
+// Usar el tipo extendido en tu componente
+const styles: CustomCSSProperties = {
+  "--swiper-navigation-size": "30px",
+  "--swiper-navigation-color": "gray",
+  "--swiper-pagination-color": "white",
+  "--swiper-navigation-color-background": "black",
+};
 
 export function Property(props: PropertyProps) {
   const { house } = props;
@@ -44,12 +60,7 @@ export function Property(props: PropertyProps) {
             </div>
           </div>
           <Swiper
-            style={{
-              "--swiper-navigation-size": "30px",
-              "--swiper-navigation-color": "gray",
-              "--swiper-pagination-color": "white",
-              "--swiper-navigation-color-background": "black",
-            }}
+            style={styles}
             slidesPerView={1.1}
             spaceBetween={10}
             navigation={true}
