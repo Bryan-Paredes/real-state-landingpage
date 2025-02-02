@@ -1,17 +1,32 @@
 import { FaRegPaperPlane } from "react-icons/fa";
 import { Transition } from "../Transition";
+import { IoMdMailUnread } from "react-icons/io";
 
 export function JoinCommunity() {
   return (
-    <Transition className="grid items-center px-4 py-8 md:py-46 md:px-36 md:grid-cols-2 bg-secondary md:gap-28 rounded-t-lg">
-      <h3 className="mzx-w-lg text-4xl font-semibold text-white">
-        Únete a la comunidad para enterarte de todo
-      </h3>
-      <div className="mx-auto mt-5 md:mx-auto">
-        <button className="flex items-center justify-between py-5 text-white transition-all duration-100 bg-black rounded-lg px-7 w-fit hover:bg-black/70">
-          <FaRegPaperPlane />
-          <span className="ml-3">Únete a la comunidad</span>
-        </button>
+    <Transition className="max-w-4xl mx-auto items-center px-4 py-8 my-10 md:gap-28 rounded-2xl bg-secondary/70 drop-shadow-lg">
+      <div className="mx-auto p-6">
+        <h2 className="text-3xl font-semibold text-white">
+          <IoMdMailUnread size={35} />
+          Novedades y actualizaciones
+        </h2>
+        <p className="text-secondary-foreground text-sm">
+          ¡Únete a la comunidad y recibe actualizaciones sobre nuevas
+          propiedades!
+        </p>
+        <div className="flex gap-4 mt-5">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className="w-fit rounded-xl p-2 bg-transparent border-2 border-white text-white outline-none focus:border-secondary-foreground placeholder:text-white"
+            placeholder="Email"
+          />
+          <button className="flex items-center justify-center gap-2 bg-white px-4 py-2 rounded-xl text-secondary-foreground font-bold">
+            <FaRegPaperPlane className="" />
+            <span className="">Suscribirme</span>
+          </button>
+        </div>
       </div>
     </Transition>
   );

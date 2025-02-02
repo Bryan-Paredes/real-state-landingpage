@@ -1,8 +1,14 @@
+import Link from "next/link";
+import { dataProperties } from "../Properties/Properties.data";
+import { PropertyProps } from "../Property/Property.types";
+
 /* eslint-disable @next/next/no-img-element */
-export function Form() {
+export function Form({ house }: PropertyProps) {
+  console.log(house.phone);
+
   return (
     <div className="px-3">
-      <div className="py-4 px-3 rounded-lg shadow-light">
+      <div className="py-4 px-3 rounded-lg shadow-2xl">
         <div className="flex gap-4">
           <img
             src="/assets/comercial.png"
@@ -57,7 +63,7 @@ export function Form() {
               Enviar mensaje
             </button>
             <button className="border-[1px] border-secondary text-secondary px-4 py-2 rounded-lg text-sm hover:bg-black transition-all duration-300 hover:text-white hover:border-black">
-              Llamar
+              <Link href={`tel:${house.phone}`}>Llamar</Link>
             </button>
           </div>
         </div>

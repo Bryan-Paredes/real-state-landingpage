@@ -9,8 +9,8 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <div className="px-4 py-8 md:py-46 md:px-36 bg-black/90 ">
-      <div className="grid gap-8 grid-cols-2 md:grid-cols-[1fr,1fr,1fr,_400px] text-white">
+    <div className="container px-4 py-8 md:py-46 md:px-36 shadow-lg border-2 border-secondary-foreground rounded-2xl">
+      <div className="grid gap-8 grid-cols-2 md:grid-cols-[1fr,1fr,1fr,_400px] text-secondary-foreground ">
         {dataFooter.map(({ id, links }) => (
           <div key={id}>
             {links.map(({ id, name, link }) => (

@@ -15,7 +15,7 @@ export function Slider() {
       freeMode={true}
       navigation={true}
       pagination={{ clickable: false }}
-      scrollbar={{ draggable: true }}
+      // scrollbar={{ draggable: true }}
       modules={[Scrollbar, EffectCards]}
       className="h-[240px] md:h-[380px] w-[300px] md:w-[500px] mx-auto"
       grabCursor
