@@ -7,7 +7,8 @@ export type PropertyProps = {
         bedrooms: number;
         bathroom: number;
         meters: number;
+        phone: string;
         description: string;
-        image: string;
+        images: string[];
     }
 }

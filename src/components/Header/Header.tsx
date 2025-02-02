@@ -13,7 +13,7 @@ export function Header() {
 
   return (
     <div className="container mx-auto my-5">
-      <div className=" flex items-center justify-between px-5 md:px-9 p-4 ">
+      <div className=" flex items-center justify-between px-5 md:px-9 p-4 shadow-md">
         <Link href="/">
           <Image src="/logo.svg" alt="Real State" width={100} height={40} />
         </Link>

@@ -12,6 +12,8 @@ import {
 } from "react-icons/lia";
 import { formatPrice } from "@/utils/formatPrice";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
 export function Properties() {
   const [counterHouses, setCounterHouses] = useState(8);
@@ -34,7 +36,7 @@ export function Properties() {
             price,
             bedrooms,
             bathroom,
-            image,
+            images,
             star,
             meters,
           }) => (
@@ -50,7 +52,7 @@ export function Properties() {
                     <span className="ml-1 font-semibold">{star}</span>
                   </div>
                   <img
-                    src={`/assets/properties/${image}`}
+                    src={`${images ? images[0] : "/assets/404-not-found.jpg"}`}
                     alt={location}
                     width={150}
                     height={150}
