@@ -12,8 +12,6 @@ import {
 } from "react-icons/lia";
 import { formatPrice } from "@/utils/formatPrice";
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
 
 export function Properties() {
   const [counterHouses, setCounterHouses] = useState(8);
@@ -28,7 +26,7 @@ export function Properties() {
       <h2 id="propierties" className="text-secondary text-center text-xl my-10">
         Propiedades
       </h2>
-      <div className="z-20 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className="z-20 grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {dataFilteredHouses.map(
           ({
             id,
@@ -85,7 +83,7 @@ export function Properties() {
       <div className="text-center my-7">
         {counterHouses < dataProperties.length && (
           <button
-            className="px-6 py-5 text-white transition-all duration-150 cursor-pointer bg-secondary rounded-xl hover:bg-black"
+            className="font-bold text-lg px-6 py-5 text-secondary transition-color duration-150 cursor-pointer border-[3px] border-secondary bg-transparentd rounded-xl hover:bg-secondary hover:text-white"
             onClick={loadMoreHouses}
           >
             Ver más propiedades
