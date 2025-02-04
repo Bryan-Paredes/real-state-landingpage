@@ -7,6 +7,14 @@ import Link from "next/link";
 import { Navbar } from "../Navbar";
 import { useState } from "react";
 import Image from "next/image";
+import {
+  SignedIn,
+  SignedOut,
+  SignIn,
+  SignInButton,
+  UserButton,
+} from "@clerk/nextjs";
+import SignInPage from "@/app/sign-in/[[...sign-in]]/page";
 
 export function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -46,6 +54,12 @@ export function Header() {
           >
             Contacto
           </Link>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </div>
     </div>
