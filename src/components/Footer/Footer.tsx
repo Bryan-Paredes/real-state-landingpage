@@ -9,16 +9,12 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <div className="container px-4 py-8 md:py-46 md:px-36 shadow-lg border-2 border-secondary-foreground rounded-2xl">
-      <div className="grid gap-8 grid-cols-2 md:grid-cols-[1fr,1fr,1fr,_400px] text-secondary-foreground ">
+    <div className="container px-4 py-8 md:py-46 md:px-36 shadow-lg border-2 rounded-xl">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 items-center justify-center max-w-3xl mx-auto text-center sm:text-left">
         {dataFooter.map(({ id, links }) => (
-          <div key={id}>
+          <div key={id} className="flex flex-col gap-2">
             {links.map(({ id, name, link }) => (
-              <Link
-                key={id}
-                href={link}
-                className="block hover:text-white hover:border-b-[1px] hover:border-white"
-              >
+              <Link key={id} href={link} className="hover:text-secondary">
                 {name}
               </Link>
             ))}
@@ -28,7 +24,7 @@ export function Footer() {
           <h4 className="mb-6 text-xl font-semibold">PruebaRealState</h4>
           <p>Calle Inventada, 5</p>
           <p>Madrid, España</p>
-          <div className="flex gap-4 mt-5 md:justify-end">
+          <div className="flex items-center gap-4 mt-5 justify-center md:justify-end">
             <LiaInstagram
               className="text-3xl cursor-pointer hover:text-slate-400"
               href="#!"
@@ -48,6 +44,11 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <hr className="border border-secondary-foreground/30 w-full my-7" />
+      <span className="text-center text-sm mx-auto">
+        &copy; {new Date().getFullYear()} PruebaRealState. Todos los derechos
+        reservados.
+      </span>
     </div>
   );
 }

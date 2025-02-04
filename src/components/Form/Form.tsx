@@ -4,8 +4,6 @@ import { PropertyProps } from "../Property/Property.types";
 
 /* eslint-disable @next/next/no-img-element */
 export function Form({ house }: PropertyProps) {
-  console.log(house.phone);
-
   return (
     <div className="px-3">
       <div className="py-4 px-3 rounded-lg shadow-2xl">
