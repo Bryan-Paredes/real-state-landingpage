@@ -45,17 +45,21 @@ export function Header() {
           >
             <BsTelephone />
             <span className="hidden lg:block hover:text-secondary hover:border-b-[1px]">
-              +(502) 5555-5555
+              Llámanos
             </span>
           </Link>
           <Link
             href="/contacto"
-            className="px-4 py-2 font-bold text-secondary border-2 border-secondary rounded-lg hover:text-white hover:bg-secondary transition-colors 3s"
+            className="px-4 py-2 font-bold text-secondary border-2 border-secondary rounded-lg hover:text-white hover:bg-secondary hover:scale-105 transition-all 3s"
           >
             Contacto
           </Link>
           <SignedOut>
-            <SignInButton />
+            <SignInButton mode="modal">
+              <button className="px-4 py-2 bg-secondary text-white rounded-lg hover:bg-secondary-foreground transition-colors duration-300 font-bold">
+                Inicia sesion
+              </button>
+            </SignInButton>
           </SignedOut>
           <SignedIn>
             <UserButton />

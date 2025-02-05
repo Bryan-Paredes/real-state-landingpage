@@ -18,12 +18,12 @@ export const services = [
         name: 'Avalúos Inmobiliarios',
         description:
             'Valoración profesional de propiedades para determinar su precio justo en el mercado actual.',
-        icon: HiOutlineScale,
+        icon: HiOutlinePresentationChartBar,
     },
     {
         name: 'Asesoría Legal y Financiera',
         description:
             'Apoyo en trámites legales, financiamiento hipotecario y regulaciones para garantizar una compra o venta sin contratiempos.',
-        icon: HiOutlinePresentationChartBar,
+        icon: HiOutlineScale,
     },
 ];
