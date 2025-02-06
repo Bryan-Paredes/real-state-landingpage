@@ -50,7 +50,7 @@ export function Header() {
           </Link>
           <Link
             href="/contacto"
-            className="px-4 py-2 font-bold text-secondary border-2 border-secondary rounded-lg hover:text-white hover:bg-secondary hover:scale-105 transition-all 3s"
+            className="px-4 py-2 font-bold text-secondary border-2 border-secondary rounded-lg hover:text-white hover:bg-secondary hover:scale-x-105 transition-all 3s"
           >
             Contacto
           </Link>

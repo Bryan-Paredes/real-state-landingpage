@@ -58,10 +58,10 @@ export function Properties() {
                     alt={location}
                     width={150}
                     height={150}
-                    className="object-cover w-full min-w-full h-[200px] rounded-xl"
+                    className="object-cover w-full min-w-full h-[200px] rounded-t-xl"
                   />
                   <Link href={`/properties/${id}`} className="cursor-pointer">
-                    <div className="px-3 py-5 flex flex-col gap-2 items-stretch justify-start">
+                    <div className="px-3 py-5 flex flex-col gap-2 items-stretch justify-start border border-secondary/50 rounded-b-xl">
                       <div className="flex items-center justify-between">
                         <div className="flex flex-col gap-2">
                           <p className="text-secondary">{location}</p>
