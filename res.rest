@@ -1,0 +1,7 @@
+GET http://localhost:1337/api/propertie-categories?fields[0]=name&fields[1]=slug&fields[2]=description&populate[image][fields][0]=url
+Authorization: Bearer 11d692b81d2f6fb49a322b0853827ff6716f8909663bfdf4cc6f2858272d1de168ec5756d286ee343ad8db88fbf3d32e4f75f54178f58a203e47ae0c2f04a3603777a81b42d4f127411c431f9663e8c8aee8df8d1da1a4a6e4db404795dd69271aceff5fb0fb9d4a909e3e365611096a5cf543a9bc2f217a6f9edb2c2a6ed340
+
+###
+
+GET http://localhost:1337/api/properties?filters[slug][$eq]=home-1&populate[images][fields][0]=url
+Authorization: Bearer 11d692b81d2f6fb49a322b0853827ff6716f8909663bfdf4cc6f2858272d1de168ec5756d286ee343ad8db88fbf3d32e4f75f54178f58a203e47ae0c2f04a3603777a81b42d4f127411c431f9663e8c8aee8df8d1da1a4a6e4db404795dd69271aceff5fb0fb9d4a909e3e365611096a5cf543a9bc2f217a6f9edb2c2a6ed340
