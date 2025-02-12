@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable @next/next/no-img-element */
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,12 +12,11 @@ export function Slider() {
   return (
     <Swiper
       effect={"cards"}
-      slidesPerView={1.5}
+      slidesPerView={1.2}
       spaceBetween={12}
       freeMode={true}
       navigation={true}
       pagination={{ clickable: false }}
-      // scrollbar={{ draggable: true }}
       modules={[Scrollbar, EffectCards]}
       className="h-[240px] md:h-[380px] w-[300px] md:w-[500px] mx-auto"
       grabCursor
@@ -27,7 +28,7 @@ export function Slider() {
             alt="house"
             width={200}
             height={700}
-            className="w-full h-full rounded-xl mx-auto"
+            className="w-full h-full rounded-xl mx-auto object-cover object-center aspect-square"
           />
         </SwiperSlide>
       ))}

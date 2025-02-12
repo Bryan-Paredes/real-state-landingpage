@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import { TransitionProps } from "./Transition.types";
 import { useAnimation, useInView, motion } from "framer-motion";

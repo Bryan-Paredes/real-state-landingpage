@@ -20,8 +20,8 @@ export function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   return (
-    <div className="container mx-auto my-5">
-      <div className=" flex items-center justify-between px-5 md:px-9 p-4 shadow-md">
+    <header className="container mx-auto my-5">
+      <section className=" flex items-center justify-between px-5 md:px-9 p-4 shadow-md">
         <Link href="/">
           <Image src="/logo.svg" alt="Real State" width={100} height={40} />
         </Link>
@@ -65,7 +65,7 @@ export function Header() {
             <UserButton />
           </SignedIn>
         </div>
-      </div>
-    </div>
+      </section>
+    </header>
   );
 }

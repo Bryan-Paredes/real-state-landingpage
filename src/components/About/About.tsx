@@ -4,7 +4,8 @@ import { Transition } from "../Transition";
 
 export function About() {
   return (
-    <Transition className="flex flex-col lg:flex-row items-center justify-center gap-5 px-10 py-16 md:px-36 md:py-32">
+    // <Transition className="flex flex-col lg:flex-row items-center justify-center gap-5 px-10 py-16 md:px-36 md:py-32">
+    <section className="container flex flex-col lg:flex-row items-center justify-between gap-8 px-10 py-16 md:px-36 md:py-32">
       <div
         className="flex flex-col items-center justify-center mb-7"
         id="about"
@@ -20,9 +21,9 @@ export function About() {
           eligendi similique necessitatibus ratione cum neque!
         </p>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex mx-auto items-center justify-center">
         <Slider />
       </div>
-    </Transition>
+    </section>
   );
 }

@@ -9,8 +9,8 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <div className="container px-4 py-8 md:py-46 md:px-36 shadow-lg border-2 rounded-xl">
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 items-center justify-center max-w-3xl mx-auto text-center sm:text-left">
+    <footer className="container px-4 py-8 md:py-46 md:px-36 shadow-lg border-2 rounded-xl my-6">
+      <section className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 items-center justify-center max-w-3xl mx-auto text-center sm:text-left">
         {dataFooter.map(({ id, links }) => (
           <div key={id} className="flex flex-col gap-2">
             {links.map(({ id, name, link }) => (
@@ -43,12 +43,12 @@ export function Footer() {
             />
           </div>
         </div>
-      </div>
+      </section>
       <hr className="border border-secondary-foreground/30 w-full my-7" />
       <span className="text-center text-sm mx-auto">
         &copy; {new Date().getFullYear()} PruebaRealState. Todos los derechos
         reservados.
       </span>
-    </div>
+    </footer>
   );
 }

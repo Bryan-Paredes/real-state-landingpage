@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Error404() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center px-5">
-      <h1 className="text-5xl font-bold mb-6">Error 404</h1>
+      <iframe src="https://lottie.host/embed/3e95df5d-980e-4206-8e87-1174033c5ba0/5nhWcr0oXc.lottie"></iframe>
       <h2 className="text-2xl font-medium mb-5">
         ¡UPS! No se ha encontrado la vivienda que buscas
       </h2>

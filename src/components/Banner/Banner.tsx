@@ -1,4 +1,3 @@
-import { FloatedSearch } from "../FloatedSearch";
 import "@/app/globals.css";
 
 export function Banner() {
@@ -14,7 +13,6 @@ export function Banner() {
             opción perfecta con profesionales calificados.
           </p>
         </div>
-        <FloatedSearch />
       </div>
     </div>
   );
