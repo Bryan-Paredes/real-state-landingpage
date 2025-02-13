@@ -2,6 +2,7 @@
 
 import { Card, CardFooter, CardTitle } from "@/components/UI/card";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Category {
   name: string;
@@ -25,7 +26,7 @@ export default function CategoryCard({
         key={index}
         className="w-full h-fit p-1 rounded-2xl flex flex-wrap flex-col gap-2 drop-shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
       >
-        <img
+        <Image
           alt={category.name}
           src={category.image}
           width={600}
