@@ -42,6 +42,7 @@ export default function SlideProperty({ image }: any) {
               key={index}
               src={url}
               alt={`Imagen `}
+              decoding="async"
               width={200}
               height={200}
               className="object-cover object-center w-full h-full rounded-2xl"

@@ -24,13 +24,14 @@ export function getFilteredPropertie({ categorySlug, sort, pageSize, page }: { c
 
     let url = `properties?filters[property_category][slug][$contains]=${categorySlug}&populate[images][fields][0]=url`
 
-    if (page) url += `&pagination[page]=${page}`
-    if (pageSize) url += `&pagination[pageSize]=${pageSize}`
+    // if (page) url += `&pagination[page]=${page}`
+    // if (pageSize) url += `&pagination[pageSize]=${pageSize}`
     if (sort) url += `&sort=price`
 
     return query(url)
         .then(res => {
             const { data, meta } = res
+
             const properties = data.map((property: Property) => {
                 const { name, slug, bedrooms, bathroom, star, meters, images: rawImages, price, location } = property
                 const images = `${STRAPI_HOST}${rawImages[0].url}`

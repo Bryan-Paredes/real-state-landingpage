@@ -12,6 +12,7 @@ import {
 import { formatPrice } from "@/utils/formatPrice";
 import PaginationComponent from "@/components/Pagination";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import Image from "next/image";
 
 interface Property {
   name: string;
@@ -79,9 +80,10 @@ export default async function PropertiesPage({
             >
               <Link href={`/propertie/${propertie.slug}`}>
                 <div className="overflow-hidden inline-block rounded-lg w-full">
-                  <img
+                  <Image
                     src={propertie.images}
                     alt={propertie.name}
+                    decoding="async"
                     width={400}
                     height={400}
                     className="w-full h-[400px] object-cover rounded-lg hover:scale-[1.02] transition-all duration-300 ease-in-out"
