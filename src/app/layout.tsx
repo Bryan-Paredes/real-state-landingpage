@@ -22,23 +22,29 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="es" suppressHydrationWarning>
         <body className={`${quickSand.className}`}>
-          <Header />
-          {children}
-          <Toaster
-            theme="light"
-            position="bottom-right"
-            toastOptions={{
-              animationOnClose: "swipe",
-              icons: {
-                error: "❌",
-                info: "ℹ️",
-                warning: "⚠",
-                success: "✅",
-                loading: "⌛",
-              },
-            }}
-          />
-          <Footer />
+          <header>
+            <Header />
+          </header>
+          <main className="min-h-dvh">
+            {children}
+            <Toaster
+              theme="light"
+              position="bottom-right"
+              toastOptions={{
+                animationOnClose: "swipe",
+                icons: {
+                  error: "❌",
+                  info: "ℹ️",
+                  warning: "⚠",
+                  success: "✅",
+                  loading: "⌛",
+                },
+              }}
+            />
+          </main>
+          <footer>
+            <Footer />
+          </footer>
         </body>
       </html>
     </ClerkProvider>

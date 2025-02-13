@@ -10,7 +10,7 @@ interface Category {
 export default async function Categories() {
   const categories = await getCategories();
 
-  if (categories.length === 0) return null;
+  // if (categories.length === 0) return null;
 
   return (
     <section
@@ -19,9 +19,17 @@ export default async function Categories() {
     >
       <h2 className="text-secondary text-center text-xl my-10">Categorías</h2>
       <div className=" flex flex-col md:flex-row items-center justify-between gap-3 mb-4 mt-6 sm:mt-8 lg:mb-0 xl:gap-8">
-        {categories.map((category: Category, index: number) => (
-          <CategoryCard key={index} category={category} index={index} />
-        ))}
+        <>
+          {categories.length === 0 ? (
+            <p className="font-bold text-2xl text-center text-secondary-foreground">
+              No se encontraron categorías
+            </p>
+          ) : (
+            categories.map((category: Category, index: number) => (
+              <CategoryCard key={index} category={category} index={index} />
+            ))
+          )}
+        </>
       </div>
     </section>
   );
