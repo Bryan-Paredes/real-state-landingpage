@@ -9,8 +9,8 @@ import { Toaster } from "@pheralb/toast";
 const quickSand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Real State - TarreDev",
-  description: "Aplicación creada del video de Youtube de TarreDev",
+  title: "Bienes Raíces - Proyecto Real State",
+  description: "Aplicación de propiedades de bienes raíces",
 };
 
 export default function RootLayout({
