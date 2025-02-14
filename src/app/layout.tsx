@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Quicksand } from "next/font/google";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/Footer/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "@pheralb/toast";
 

@@ -4,7 +4,7 @@ import Categories from "@/components/Categories";
 import CountSection from "@/components/CountSection";
 import { JoinCommunity } from "@/components/JoinCommunity";
 import { LocationMap } from "@/components/LocationMap";
-import { Services } from "@/components/Services/Services";
+import { Services } from "@/components/Services";
 
 export default function Home() {
   return (
