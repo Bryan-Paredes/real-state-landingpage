@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import SlideProperty from "@/components/SlidePropertie";
+import { DataProperties, dataProperties } from "@/lib/data-properties";
 
 interface Property {
   title: string;
@@ -36,9 +37,15 @@ export default async function Page({
 }) {
   const { slug } = await params;
 
-  const { propertieBySlug } = await getPropertieInfo({ slug });
+  const propertyFiltered = dataProperties.filter(
+    (property: DataProperties) => property.slug === slug
+  );
 
-  const categorySlug = propertieBySlug[0].property_category.slug;
+  const categorySlug = propertyFiltered[0].categoria;
+
+  // const { propertieBySlug } = await getPropertieInfo({ slug });
+
+  // const categorySlug = propertieBySlug[0].property_category.slug;
 
   return (
     <main className="max-w-5xl mx-auto my-7">
@@ -52,50 +59,50 @@ export default async function Page({
       </Link>
       <div className=" my-3 py-5">
         <div className="px-6 my-auto">
-          {propertieBySlug.map((property: Property) => (
+          {propertyFiltered.map((property: DataProperties) => (
             <section
               key={property.slug}
               className="flex flex-col items-center justify-between gap-10"
             >
               {property.images && property.images.length > 0 ? (
-                <SlideProperty
-                  image={property.images.map((image: any) => image.url)}
-                />
+                <SlideProperty image={property.images} />
               ) : (
                 <p>No se encuentra ninguna imagen</p>
               )}
-              <div className="bg-white p-3 rounded-xl">
-                <h1 className="text-3xl font-bold mb-4 text-secondary flex flex-col justify-center items-start gap-5">
-                  <span>{property.title}</span>
+              <div className="bg-white p-3 rounded-xl max-w-[650px] mx-auto">
+                <h1 className="text-3xl font-bold mb-4 text-secondary flex flex-col justify-center items-start gap-5 text-balance my-10">
+                  <span>{property.titulo}</span>
                   <span className="font-semibold">
-                    {formatPrice(property.price)}
+                    {formatPrice(property.precio)}
                   </span>
                 </h1>
                 <div className="flex gap-5 my-4">
                   <h2 className="flex gap-3 text-xl items-center">
-                    <TfiLocationPin /> {property.location}
+                    <TfiLocationPin /> {property.ubicacion}
                   </h2>
                   <div className="flex items-center px-2 py-1 rounded-lg bg-secondary text-white top-2 right-2">
                     <LiaStarSolid />
-                    <span className="ml-1 font-semibold">{property.star}</span>
+                    <span className="ml-1 font-semibold">
+                      {property.puntuacion}
+                    </span>
                   </div>
                 </div>
                 <div className="gap-4 flex mt-4">
                   <div className="flex items-center justify-center px-2 py-1 my-1 rounded-lg bg-slate-300/30">
                     <LiaBedSolid />
-                    <span className="ml-2">{property.bedrooms}</span>
+                    <span className="ml-2">{property.habitaciones}</span>
                   </div>
                   <div className="flex items-center justify-center px-2 py-1 my-1 rounded-lg bg-slate-300/30">
                     <LiaBathSolid />
-                    <span className="ml-2">{property.bathroom}</span>
+                    <span className="ml-2">{property.baños}</span>
                   </div>
                   <div className="flex items-center justify-center px-2 py-1 my-1 rounded-lg bg-slate-300/30">
                     <LiaRulerCombinedSolid />
-                    <span className="ml-2">{property.meters}</span>
+                    <span className="ml-2">{property.metros}</span>
                   </div>
                 </div>
-                <div className="my-3">
-                  <BlocksRenderer content={property.description} />
+                <div className="my-6 text-balance text-lg font-medium">
+                  {property.descripcion}
                 </div>
               </div>
             </section>
