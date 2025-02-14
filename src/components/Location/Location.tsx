@@ -4,7 +4,7 @@ import { Transition } from "../Transition";
 import { Map } from "leaflet";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { MarkerHouse } from "./MarkerHouse";
+import { MarkerHouse } from "@/components/Location/MarkerHouse/MarkerHouse";
 
 export function Location() {
   const coordinatePoint = {

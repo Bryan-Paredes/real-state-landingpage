@@ -41,7 +41,7 @@ export default function SlideProperty({ image }: any) {
             <img
               key={index}
               src={url}
-              alt={`Imagen `}
+              alt={`Imagenes  `}
               decoding="async"
               width={200}
               height={200}

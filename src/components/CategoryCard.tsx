@@ -1,20 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Card, CardFooter, CardTitle } from "@/components/UI/card";
-import Link from "next/link";
+import { CategoriesInfo } from "@/lib/categories";
 import Image from "next/image";
-
-interface Category {
-  name: string;
-  slug: string;
-  image: string;
-}
+import Link from "next/link";
 
 export default function CategoryCard({
   category,
   index,
 }: {
-  category: Category;
+  category: CategoriesInfo;
   index: number;
 }) {
   return (
@@ -28,7 +23,8 @@ export default function CategoryCard({
       >
         <Image
           alt={category.name}
-          src={category.image}
+          src={category.image ? category.image[0] : "/assets/404-not-found.jpg"}
+          decoding="async"
           width={600}
           height={600}
           className="rounded-2xl aspect-[calc(4*3+1)/18] object-cover"

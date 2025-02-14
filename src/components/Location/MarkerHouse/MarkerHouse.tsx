@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Marker, Popup, useMap } from "react-leaflet";
-import { MarkerHouseProps } from "./MarkerHouse.types";
+import { MarkerHouseProps } from "@/types/marker-house";
 import { icon } from "leaflet";
-import { housesData } from "./MarkerHouse.data";
+import { housesData } from "@/data/marker-house";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 export function MarkerHouse(props: MarkerHouseProps) {
