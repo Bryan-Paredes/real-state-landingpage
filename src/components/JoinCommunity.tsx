@@ -1,7 +1,6 @@
 "use client";
 
 import { FaRegPaperPlane } from "react-icons/fa";
-import { Transition } from "../Transition";
 import { IoMdMailUnread } from "react-icons/io";
 import { toast } from "@pheralb/toast";
 import confetti from "canvas-confetti";
