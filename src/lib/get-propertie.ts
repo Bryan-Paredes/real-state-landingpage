@@ -20,7 +20,7 @@ interface Property {
 };
 
 
-export function getFilteredPropertie({ categorySlug, sort, pageSize, page }: { categorySlug: string, sort: string | undefined, pageSize: number, page: string | undefined }) {
+export function getFilteredPropertie({ categorySlug, sort }: { categorySlug: string, sort: string | undefined }) {
 
     let url = `properties?filters[property_category][slug][$contains]=${categorySlug}&populate[images][fields][0]=url`
 
@@ -30,7 +30,10 @@ export function getFilteredPropertie({ categorySlug, sort, pageSize, page }: { c
 
     return query(url)
         .then(res => {
-            const { data, meta } = res
+            const { data } = res
+
+            console.log(data);
+
 
             const properties = data.map((property: Property) => {
                 const { name, slug, bedrooms, bathroom, star, meters, images: rawImages, price, location } = property
@@ -38,6 +41,6 @@ export function getFilteredPropertie({ categorySlug, sort, pageSize, page }: { c
                 return { name, slug, bedrooms, price, location, images, bathroom, star, meters }
             })
 
-            return { properties, pagination: meta.pagination }
+            return { properties }
         })
 }
