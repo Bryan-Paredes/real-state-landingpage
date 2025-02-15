@@ -17,7 +17,7 @@ const config: Config = {
 
 			},
 			backgroundImage: {
-				"banner-image": "url('/assets/house-banner.png')"
+				"banner-image": "url('/assets/banner.webp')"
 			},
 		}
 	},
