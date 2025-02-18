@@ -1,23 +1,19 @@
+# Real State Landing Page
 
+> 🏡 **Pagina Web para mostrar propiedades** > ![Real State](/public/screenshot.jpeg)
 
-## React JS, NextJS, Tailwind CSS, Framer Motion, Leaflet JS, Swiper JS.
+## 📝 Descripción
 
-```bash
-# Step 1 - Install dependences
-yarn
-# Step 2 - See the result in your browser on localhost:3000
-yarn dev
-```
+Esta pagina web es una página web que muestra las propiedades. Se puede utilizar para mostrar propiedades con información como su ubicación, su precio, su número de habitaciones, su tamaño, entre otros.
 
-![screencapture-real-state-tarredev-netlify-app-2023-11-12-10_21_34](https://github.com/ratasi/real-state-youtube/assets/16082370/0a019fc3-077b-4091-94d1-3b6fad48b0de)
+## 🚀 Tecnologías
 
-![screencapture-real-state-tarredev-netlify-app-properties-2-2023-11-12-10_21_48](https://github.com/ratasi/real-state-youtube/assets/16082370/a356b81c-af85-4684-99d0-53272eb18ea6)
+- Next.js
+- Tailwind CSS
+- TypeScript
+- Strapi CMS
 
+> [!NOTE]
+> La informacion se recupera desde JSON, se puede ver el consumo de la API de strapi en el archivo src/lib/strapi.ts
 
-
-
-## Deploy 
-
-```bash
-yarn build
-```
+### 🔗 [Visitar Sitio Web](https://real-state-landingpage.vercel.app)
